@@ -1,0 +1,86 @@
+#container{
+    height: calc(100vh - 110px);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    background: repeating-linear-gradient(
+        0deg,
+        #79a0e3 0px,
+        #79a0e3 10px,
+        #668cd7 10px,
+        #668cd7 50px,
+        #79a0e3 50px,
+        #79a0e3 60px,
+        #5576c5 60px,
+        #5576c5 90px,
+        #79a0e3 90px,
+        #79a0e3 100px,
+        #4c69b8 100px,
+        #4c69b8 140px,
+        #79a0e3 140px,
+        #79a0e3 150px,
+        #4c69b8 150px,
+        #4c69b8 160px,
+        #79a0e3 160px,
+        #79a0e3 170px,
+        #5576c5 170px,
+        #5576c5 190px
+    );
+    ::-webkit-scrollbar{ /*para el tamaño*/
+        width: 12px;
+        margin-right: 20px;
+      }
+      ::-webkit-scrollbar-thumb{/*la parte de dentro del scroll*/
+        background-color: #e9563d;
+        border-radius: 2px;
+        /* Con este truco hago el thumb más chico que su padre */
+        box-shadow: inset 0 0 0 2px #882a1a;
+        border-left: 1.5px solid transparent;
+        border-right: 1.5px solid transparent;
+        background-clip: padding-box;
+        cursor:grab;
+      }
+      ::-webkit-scrollbar-track { /*fondo del scroll*/
+        border: solid #90ace7 2px;
+        cursor: pointer;
+        background: repeating-linear-gradient(
+          0deg,
+          #276d83,
+          #276d83 5px,
+          #1c4760 7px,
+          #1c4760 9px
+        );
+      }
+}
+
+
+app-foto-pokemon{
+    margin-left: 340px;
+    z-index: 2;
+
+}
+app-detalle{
+    position: absolute;
+    z-index: 1;
+    left:-90vw;
+    transition: 0.5s;
+    &.abierto{
+        left:0;
+    }
+}
+#tarjetasContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: 10px;
+
+}
+
+#spinner{
+    max-height: 50px;
+    
+}
+
